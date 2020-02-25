@@ -12,14 +12,14 @@ import time
 def on_message(client, userdata, message):
     # print pesan
     print("message received " ,str(message.payload.decode("utf-8")))
-    print("message topic=",message.topic)
-    print("message qos=",message.qos)
-    print("message retain flag=",message.retain)
+    #print("message topic=",message.topic)
+    #print("message qos=",message.qos)
+    #print("message retain flag=",message.retain)
     
 ########################################
     
 # buat definisi nama broker yang akan digunakan
-broker = "127.0.0.1"
+broker = "localhost"
 
 # buat client baru bernama P1
 print("creating new instance")
@@ -30,7 +30,7 @@ client.on_message = on_message
 
 # buat koneksi ke broker
 print("connecting to broker")
-client.connect(broker, port=1883)
+client.connect(broker, port=3333)
 print("connected!")
 
 # jalankan loop client
@@ -38,13 +38,14 @@ client.loop_start()
 
 
 # client melakukan subsribe ke topik 1
-print("Subscribing to topic","waktu")
-client.subscribe("waktu")
+print("Subscribing to topic","house/bulbs/bulb1")
+client.subscribe("house/bulbs/bulb1")
 
 # loop forever
 while True:
     # berikan waktu tunggu 1 detik 
-    time.sleep(1)
+    #time.sleep(1)
+    pass
 
 
 #stop loop
