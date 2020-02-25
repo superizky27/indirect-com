@@ -19,7 +19,7 @@ def on_message(client, userdata, message):
 ########################################
     
 # buat definisi nama broker yang akan digunakan
-broker = "localhost"
+broker = "192.168.1.3"
 
 # buat client baru bernama P1
 print("creating new instance")
@@ -38,14 +38,14 @@ client.loop_start()
 
 
 # client melakukan subsribe ke topik 1
-print("Subscribing to topic","house/bulbs/bulb1")
-client.subscribe("house/bulbs/bulb1")
+print("Subscribing to topic","waktu")
+client.subscribe("waktu")
 
 # loop forever
 while True:
     # berikan waktu tunggu 1 detik 
-    #time.sleep(1)
-    pass
+    time.sleep(1)
+    #pass
 
 
 #stop loop
