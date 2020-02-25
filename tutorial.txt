@@ -1,0 +1,20 @@
+I. Install paho-mqtt
+1. buka thonny
+2. tools -> open system shell
+3. pip --version
+4. pip install paho-mqtt
+Successfully installed paho-mqtt-1.4.0
+
+
+II. Install mosquitto (broker)
+Cara 1:
+1. download mosquitto
+2. install
+
+Cara 2:
+1. download mosquitto
+http://www.steves-internet-guide.com/install-mosquitto-broker/#
+2. jalankan menggunakan cmd
+mosquitto.exe -p 3333
+
+III. Jalankan script python pub_sub.py
